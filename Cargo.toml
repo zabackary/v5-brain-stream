@@ -1,0 +1,21 @@
+[package]
+name = "v5-brain-stream"
+version = "1.0.0"
+authors = ["zabackary"]
+description = "Stream the screen of a VEX V5 Brain to your desktop"
+license = "MIT"
+homepage = "https://github.com/zabackary/v5-brain-stream"
+repository = "https://github.com/zabackary/v5-brain-stream"
+readme = "README.md"
+keywords = ["robotics", "vex", "v5"]
+categories = ["hardware-support"]
+edition = "2021"
+
+[dependencies]
+iced = { version = "^0.13.1", features = ["tokio", "image"] }
+tokio = { version = "^1.38.0", features = ["full"] }
+vex-v5-serial = { version = "0.3.1", default-features = false, features = [
+  "serial",
+  "screen-command",
+] }
+image = "0.25.5"
